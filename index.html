@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Code Comment Titles</title>
+        <link rel="stylesheet" href="style.css" />
+
+        <!-- ------------------------- GOOGLE FONTS ------------------------- -->
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet" />
+    </head>
+    <body>
+        <div class="app-wrapper">
+            <h1 class="app-title">Code Comment Titles</h1>
+            <hr />
+
+            <!-- ---------------------- MENU AND MENU BOX ----------------------- -->
+
+            <div class="menu-header">
+                <div class="menu-label-box">
+                    <i class="bi bi-x-circle-fill" id="close-btn"></i>
+                    <p></p>
+                </div>
+                <i class="bi bi-file-earmark-text-fill" id="about-btn"></i>
+                <i class="bi bi-gear-fill" id="settings-btn"></i>
+            </div>
+
+            <div class="menu-box-wrapper">
+                <!-- ------------------------ SETTINGS MENU ------------------------- -->
+
+                <div class="menu-settings-wrapper">
+                    <div class="menu-block" id="settings-language">
+                        <p class="menu-block-title">Choose Your Coding Language</p>
+                        <div class="settings-languages">
+                            <div class="settings-language-sigular">
+                                <input type="radio" name="language" id="javascript" />
+                                <label for="javascript">Javascript</label>
+                            </div>
+                            <div class="settings-language-sigular">
+                                <input type="radio" name="language" id="html" />
+                                <label for="html">HTML</label>
+                            </div>
+                            <div class="settings-language-sigular">
+                                <input type="radio" name="language" id="css" />
+                                <label for="css">CSS</label>
+                            </div>
+                            <div class="settings-language-sigular">
+                                <input type="radio" name="language" id="python" />
+                                <label for="python">Python</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-block" id="settings-size">
+                        <p class="menu-block-title">Choose Your Title Size</p>
+                        <div class="settings-size">
+                            <input type="number" name="size" id="size" />
+                            <p>Characters</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- -------------------------- ABOUT MENU -------------------------- -->
+
+                <div class="menu-about-wrapper">
+                    <div class="menu-block" id="about">
+                        <p class="menu-block-title">What is Code Comment Titles ?</p>
+                        <p class="menu-description">
+                            This app standardizes comment titles for code and was the very first program I coded.
+                            Although it is functional, I am constantly working on improving and adding new features to
+                            create an even better version.
+                        </p>
+                    </div>
+                    <div class="menu-block" id="how-it-works">
+                        <p class="menu-block-title">How it Works</p>
+                        <p class="menu-description">
+                            + The program will generate a title in the form of a comment for the language of your
+                            choice.
+                            <br />
+                            + By default, the title size is set to 70 characters and the language is set to Javascript.
+                            <br />
+                            + Once the title is generated, it will be automatically copied to your clipboard. <br />
+                            + The app uses the default font of vsCode for a better visualization.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ------------------------ INPUT SECTION ------------------------- -->
+
+            <textarea
+                class="title-input"
+                name="title"
+                id="title-textarea"
+                cols="100%"
+                rows="10"
+                placeholder="Your Title will automatically be copied to the clipboard"
+            ></textarea>
+            <div class="create-title-subtitle">
+                <button id="title">Create Title</button>
+                <button id="subtitle">Create SubTitle</button>
+            </div>
+
+            <!-- ------------------------ OUTPUT SECTION ------------------------ -->
+
+            <div class="output-title-box">
+                <div class="output-header">
+                    <p>Output:</p>
+                    <button class="output-header-clear-btn">Clear</button>
+                </div>
+                <p id="title-output"></p>
+                <p id="warning">Your Title will automatically be copied to the clipboard</p>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>

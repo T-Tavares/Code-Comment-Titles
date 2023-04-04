@@ -1,0 +1,294 @@
+/* ----------------------- BOOTSTRAP ICONS ------------------------ */
+
+@import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css');
+
+/* ------------------------ INITIAL SETUP  ------------------------ */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inconsolata', monospace;
+
+    --steel-blue: #4682b4;
+    --cadet-blue: #5f9ea0;
+    --slate-grey: #708090;
+    --light-steel-blue: #b0c4de;
+    --dark-slate-grey: #2f4f4f;
+    --blue-gray: #9aabca;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    background-color: var(--light-steel-blue);
+}
+
+/* ---------------------- GENERAL APP STYLE ----------------------- */
+
+h1 {
+    font-variant: small-caps;
+}
+
+button,
+input,
+textarea {
+    width: 100%;
+    margin: 10px 0;
+    height: 50px;
+    padding: 10px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
+button {
+    font-size: 1.2rem;
+    letter-spacing: 5px;
+    background-color: var(--steel-blue);
+    color: #fff;
+}
+hr {
+    width: 100%;
+    margin: 10px 0 0 0;
+    height: 2px;
+    border: none;
+    background-color: #fff;
+}
+
+/* ------------------ GENERAL APP STYLE CLASSES ------------------- */
+
+.app-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    padding: 0 15vw;
+}
+.app-title {
+    color: #ffffff;
+    font-size: 4rem;
+    font-weight: 100;
+}
+
+/* ------------------------- MENU HEADER -------------------------- */
+
+.menu-header {
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    margin: 15px;
+    color: #fff;
+}
+.menu-header i {
+    font-size: 25px;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    z-index: 5;
+}
+.menu-header i:hover {
+    opacity: 50%;
+}
+
+/* --------------- MENU BOX AND IT'S GENERAL STYLE ---------------- */
+
+.menu-box-wrapper {
+    height: 0;
+    overflow: hidden;
+    position: relative;
+    top: -57px;
+
+    margin-bottom: -45px;
+    padding: 30px 10px 10px 10px;
+    width: 100%;
+
+    color: #fff;
+
+    font-size: 1.1rem;
+    font-weight: 500;
+
+    border-radius: 0 0 8px 8px;
+
+    z-index: 2;
+    transition: 0.5s ease-in-out;
+}
+.menu-box-wrapper.open {
+    height: fit-content;
+    background-color: var(--blue-gray);
+}
+
+.menu-label-box {
+    display: none;
+    align-items: center;
+    margin: 0 auto 0 0;
+    z-index: 5;
+}
+.menu-label-box.open {
+    display: flex;
+}
+.menu-block {
+    margin: 30px 0 0;
+    padding: 0 20px 20px 20px;
+    border: 1px solid #fff;
+    width: 100%;
+    height: fit-content;
+    border-radius: 5px;
+}
+
+.menu-block-title {
+    position: relative;
+    top: -8px;
+    font-size: 16px;
+    width: fit-content;
+    padding: 0 5px;
+    background-color: var(--blue-gray);
+}
+.menu-description {
+    text-align: justify;
+    margin: 10px 0 0 0;
+    color: #ffffffbd;
+}
+
+/* ------------- MENU SETTINGS / ABOUT - OPEN CLASSES ------------- */
+
+.menu-settings-wrapper,
+.menu-about-wrapper {
+    display: none;
+    opacity: 0;
+    transition: 0.5s ease-in-out;
+}
+.menu-settings-wrapper.open,
+.menu-about-wrapper.open {
+    opacity: 100%;
+    display: block;
+}
+
+/* ------------------ MENU SETTINGS - LANGUAGES ------------------- */
+
+.settings-languages {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.settings-language-sigular {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    font-size: 14px;
+}
+
+.settings-language-sigular input {
+    width: 25px;
+    height: 25px;
+    accent-color: var(--steel-blue);
+}
+
+/* ------------------ MENU SETTINGS - TITLE SIZE ------------------ */
+
+.settings-size {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+.settings-size input {
+    width: 100px;
+    margin-right: 20px;
+    height: fit-content;
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+}
+
+/* ------------------------- USER INPUT  -------------------------- */
+
+.title-input {
+    height: 10vh;
+    border-radius: 7px;
+    padding: 15px 10px;
+}
+
+/* --------------------- CREATE TITLE BUTTONS --------------------- */
+
+.create-title-subtitle {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.create-title-subtitle button {
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+.create-title-subtitle button:hover {
+    background-color: #5dadef;
+}
+.create-title-subtitle button:active {
+    font-size: 1.1rem;
+}
+
+.create-title-subtitle button:nth-child(1) {
+    margin-right: 9px;
+}
+.create-title-subtitle button:nth-child(2) {
+    margin-left: 9px;
+}
+
+/* ------------------------- TITLE OUTPUT ------------------------- */
+
+.output-title-box {
+    width: 100%;
+    border: 1px solid #fff;
+    border-radius: 8px;
+    padding: 15px;
+    margin-top: 10px;
+}
+.output-title-box p {
+    font-size: 1rem;
+    font-family: 'Inconsolata', monospace;
+    color: #fff;
+    text-align: center;
+}
+.output-title-box p:nth-child(2) {
+    margin-top: 30px;
+}
+.output-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 15px;
+    margin: -15px;
+
+    border-bottom: 1px solid #fff;
+    border-radius: 8px 8px 0 0;
+    background-color: var(--blue-gray);
+}
+
+.output-header-clear-btn {
+    width: 60px;
+    height: 27px;
+    background-color: #fff;
+    color: var(--blue-gray);
+    font-weight: 900;
+    text-align: center;
+    letter-spacing: 0;
+    font-size: 12px;
+    line-height: 0px;
+
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+.output-header-clear-btn:hover {
+    opacity: 50%;
+}
+.output-header-clear-btn:active {
+    font-size: 6px;
+}
