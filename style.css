@@ -16,6 +16,12 @@
     --light-steel-blue: #b0c4de;
     --dark-slate-grey: #2f4f4f;
     --blue-gray: #9aabca;
+
+    --dark-cyan: #01131a;
+
+    --font-colour: var(--slate-grey);
+    --bg-colour: var(--dark-cyan);
+    --btn-bg-colour: var(--dark-slate-grey);
 }
 
 body {
@@ -25,7 +31,8 @@ body {
     justify-content: center;
     height: 100vh;
     overflow: hidden;
-    background-color: var(--light-steel-blue);
+    background-color: var(--bg-colour);
+    color: var(--font-colour);
 }
 
 /* ---------------------- GENERAL APP STYLE ----------------------- */
@@ -48,15 +55,15 @@ textarea {
 button {
     font-size: 1.2rem;
     letter-spacing: 5px;
-    background-color: var(--steel-blue);
-    color: #fff;
+    background-color: var(--btn-bg-colour);
+    color: #ffffff80;
 }
 hr {
     width: 100%;
     margin: 10px 0 0 0;
     height: 2px;
     border: none;
-    background-color: #fff;
+    background-color: #ffffff20;
 }
 
 /* ------------------ GENERAL APP STYLE CLASSES ------------------- */
@@ -72,7 +79,7 @@ hr {
     padding: 0 15vw;
 }
 .app-title {
-    color: #ffffff;
+    color: #ffffff50;
     font-size: 4rem;
     font-weight: 100;
 }
@@ -109,7 +116,7 @@ hr {
     padding: 30px 10px 10px 10px;
     width: 100%;
 
-    color: #fff;
+    color: #ffffff50;
 
     font-size: 1.1rem;
     font-weight: 500;
@@ -121,7 +128,7 @@ hr {
 }
 .menu-box-wrapper.open {
     height: fit-content;
-    background-color: var(--blue-gray);
+    background-color: var(--btn-bg-colour);
 }
 
 .menu-label-box {
@@ -136,7 +143,7 @@ hr {
 .menu-block {
     margin: 30px 0 0;
     padding: 0 20px 20px 20px;
-    border: 1px solid #fff;
+    border: 1px solid #ffffff30;
     width: 100%;
     height: fit-content;
     border-radius: 5px;
@@ -148,12 +155,12 @@ hr {
     font-size: 16px;
     width: fit-content;
     padding: 0 5px;
-    background-color: var(--blue-gray);
+    background-color: var(--btn-bg-colour);
 }
 .menu-description {
     text-align: justify;
     margin: 10px 0 0 0;
-    color: #ffffffbd;
+    color: #ffffff50;
 }
 
 /* ------------- MENU SETTINGS / ABOUT - OPEN CLASSES ------------- */
@@ -213,6 +220,8 @@ hr {
     height: 10vh;
     border-radius: 7px;
     padding: 15px 10px;
+    background-color: #ffffff10;
+    color: #ffffff80;
 }
 
 /* --------------------- CREATE TITLE BUTTONS --------------------- */
@@ -228,7 +237,7 @@ hr {
     transition: 0.2s ease-in-out;
 }
 .create-title-subtitle button:hover {
-    background-color: #5dadef;
+    background-color: #062734;
 }
 .create-title-subtitle button:active {
     font-size: 1.1rem;
@@ -245,7 +254,7 @@ hr {
 
 .output-title-box {
     width: 100%;
-    border: 1px solid #fff;
+    border: 1px solid #ffffff20;
     border-radius: 8px;
     padding: 15px;
     margin-top: 10px;
@@ -253,7 +262,7 @@ hr {
 .output-title-box p {
     font-size: 1rem;
     font-family: 'Inconsolata', monospace;
-    color: #fff;
+    color: #ffffff50;
     text-align: center;
 }
 .output-title-box p:nth-child(2) {
@@ -267,16 +276,16 @@ hr {
     padding: 0 15px;
     margin: -15px;
 
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid #ffffff20;
     border-radius: 8px 8px 0 0;
-    background-color: var(--blue-gray);
+    background-color: var(--btn-bg-colour);
 }
 
 .output-header-clear-btn {
     width: 60px;
     height: 27px;
-    background-color: #fff;
-    color: var(--blue-gray);
+    background-color: #ffffff20;
+    color: #ffffff80;
     font-weight: 900;
     text-align: center;
     letter-spacing: 0;
